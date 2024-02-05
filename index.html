@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body background="https://www.wallart.com/media/catalog/product/cache/871f459736130e239a3f5e6472128962/w/0/w00711_option3_1.jpg">
+        <div class="text-container">
+            <h1 style="top: 40%;">
+                Would you be my valentines?
+            </h1>
+
+        </div>
+            
+
+
+    <div class="buttonContainer">
+        
+        <button class="button" id="yes" onclick="yesFn()">
+            YES
+        </button>
+        <button class="button" id="randomButton" onclick="moveToRandomPosition()">
+            NO :(
+        </button>
+    </div>
+
+
+   <script>
+    function yesFn(){
+        location.href = "yees.html";
+    }
+    
+    function moveToRandomPosition() {
+        var button = document.getElementById("randomButton");
+
+        // Get the dimensions of the viewport
+        var viewportWidth = window.innerWidth - button.clientWidth;
+        var viewportHeight = window.innerHeight - button.clientHeight;
+
+        // Generate random coordinates
+        var randomX = Math.floor(Math.random() * viewportWidth);
+        var randomY = Math.floor(Math.random() * viewportHeight);
+
+        // Apply the random position
+        button.style.left = randomX + "px";
+        button.style.top = randomY + "px";
+  }
+  
+  </script>
+    
+</body>
+</html>
